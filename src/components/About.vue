@@ -1,8 +1,12 @@
 <template>
   <div id="about">
   	<div id="main-wrapper">
+  		<h1>About Us</h1>
   		<p>NewTouch Digital is a health technology building a mobile health and data analytics platform to optimize clinical care for sufferers of neurodegenerative diseases.</p> 
   		<p>NewTouch Digital is based in Washington D.C. </p>
+  		<h1>MISSION</h1>
+  		<p>Our mission is to digitally reshape and improve the model of care for a broad range of neurodegenerative diseases by embedding NewTouch’s clinical platform and data analytical tools with doctors, patients, and industry partners. 
+	               </p>	
   	</div>
    </div>
 </template>
@@ -29,15 +33,20 @@ export default {
 #main-wrapper{
     position: relative;
     width: 80%;
-    margin: 15% 10%;
-    padding:3%;
+    margin: 10% 10%;
+    padding:0.5% 3% 3%;
     text-align: left;
-    font-size:1.5em;
-    font-weight: bold;
+    font-size:1.2em;
     background-color: rgba(0,0,0,0.7);
     color:white;
 }
+h1{
+    font-size:1.2em;
+    font-weight: bold;
+    margin-top:5%;
+}
 #main-wrapper>p{
-    margin-bottom: 5%;
+    margin-bottom: 1%;
+    line-height: 35px;
 }
 </style>

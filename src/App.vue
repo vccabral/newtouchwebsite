@@ -3,9 +3,9 @@
     <div id="router">
       <router-link to="/"class="logo"><img src="./assets/logo.png" alt="#">
       </router-link>
-      <router-link to="/about">About Us</router-link>
+      <router-link to="/about">About</router-link>
       <router-link to="/people">People</router-link> 
-      <router-link to="/contact">Contact Us</router-link>
+      <router-link to="/contact">Contact</router-link>
     </div>
     <transition name="fade" duration="1000">
        <router-view></router-view>
@@ -26,14 +26,32 @@ export default {
 </script>
 
 <style>
+body{
+  overflow: hidden;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   overflow: hidden;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    -o-user-select: none;
+    user-select: none;
   cursor:default;
 }
+[v-cloak] {
+  display: none;
+}
+textarea{
+  resize: none;
+}
+textarea, input{
+  outline: none;
+}
+a:hover,a:visited{text-decoration:none;}
 a{
   text-decoration: none;
 }
@@ -52,7 +70,7 @@ li{
 #router>a{
   display: block;
   color:white;
-  width:15%;
+  width:10%;
   margin:15px 10px;
   float: left;
   padding-bottom: 21px;
