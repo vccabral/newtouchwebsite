@@ -12,7 +12,7 @@
     <transition name="fade" duration="1000">
        <router-view></router-view>
     </transition>
-    <footer>Copyright {{current_year}} © New Touch Digital, Inc. All rights reserved.</footer>
+    <footer>Copyright {{current_year}} 漏 New Touch Digital, Inc. All rights reserved.</footer>
   </div>
 </template>
 

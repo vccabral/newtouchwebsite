@@ -44,13 +44,13 @@ export default {
           image: require('../assets/people/jonathan.jpg'),
           info: `Jonathan Pomeraniec, MD/MBA is a founder and Chief Medical Officer of NewTouch Digital. Jonathan has deep roots in both business and medicine. After completing undergraduate work at the Wharton School at the University of Pennsylvania, he worked as an analyst at Lehman Brothers and Barclays Capital. Jonathan transitioned to medicine by completing a postbaccalaureate degree at Columbia University and subsequently pursued an enfolded MD/MBA degree at the University of Virginia (UVA) School of Medicine and Darden School of Business. Jon was the president of the medical school and a Darden Foundation Scholar.  Jonathan is currently a resident in the joint UVA/National Institutes of Health (NIH) Neurosurgery residency program. Jonathan has conducted original research in functional neuroimaging and continues research in functional, pediatric and innovations of neurosurgery. He will serve as medical and business expert, specifically focusing on concept and product design along with patient care and clinical trials and rollout.  
 `
-        }/*,
+        },
         {
           name: 'Chris Cabral',
           position: 'Co-Founder & Chief Technology Officer',
           image: require('../assets/people/chris.jpg'),
           info: `Chris Cabral is a founder and Chief Technology Officer of NewTouch Digital. Chris has spent the last 10 years in the technology industry focusing on Web Development, Cyber Security and Automated Systems Management. As a senior technologist, consulting for several Federal agencies, Chris built out continuous deployment solutions for the Consumer Financial Protection Bureau and Continuous Monitoring Solutions for the assets inside the Department of Defense. Chris is an avid open source contributor whose accomplishments range from cross platform drawing tools in iOS and android to an open source training guides for ansible. He also personally maintains several ansible playbooks that are frequently used by the Consumer Finance Protection Bureau today to maintain their critical infrastructure. Chris graduated in 2007 from the Massachusetts Institute of Technology with a B.S. in Nuclear Science and Engineering. During that time he contributed to a the Journal of Biomedical Optics performing research and analysis on diffusion magnetic resonance imaging of mouse tongues. `
-        }  */
+        }
       ]
     }
   },
@@ -75,7 +75,7 @@ export default {
     position: relative;
     width: 80%;
     min-height: 50%;
-    margin: 10% 10%;
+    margin: 8% 10% 10%;
     padding:3%;
     text-align: left;
     font-size:1em;
@@ -85,16 +85,16 @@ export default {
 }
 #main-wrapper>p{
   font-size:1.5em;
-  margin-bottom:5%;
+  margin:2% 0 2%;
 }
 #main-wrapper>ul{
-  margin:10px;
+  margin:10px 0 0;
   font-size:0.7em;
   position: relative;
 }
 #main-wrapper>ul>li{
   text-align: center;
-  width:25%;
+  width:22%;
   float: left;
   
 }
@@ -110,13 +110,18 @@ export default {
   background-color: rgba(230,230,230,0.6);
   color:black;
   padding: 10px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5); 
+  box-shadow: 4px 0 2px 0 rgba(0,0,0,0.5); 
 }
 #info{
-  margin-top: 3%;
+  background-color: rgba(230,230,230,0.6);
+  box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.5); 
+  margin: 0;
+  color: black;
+  padding: 2% 5%;
   text-align: left;
   float: left;
   z-index:5;
-  min-width:400px!important;
+  min-width:350px!important;
+  max-width: 80.3%;
 }
 </style>
