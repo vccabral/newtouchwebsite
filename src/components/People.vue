@@ -57,7 +57,7 @@ export default {
 #main-wrapper{
     position: relative;
     width: 80%;
-    min-height: 60%;
+    min-height: 40%;
     margin: 15% 10%;
     padding:3%;
     text-align: left;
