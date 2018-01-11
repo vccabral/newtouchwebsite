@@ -1,15 +1,15 @@
 <template>
   <div id="people">
         <div id="main-wrapper">
-          <p>People on our team</p>
+          <p>FOUNDERS</p>
           <ul>
             <li v-for="(people,index) in team" v-on:mouseover="hover_card = index"
               v-on:mouseout="hover_card=-1" v-bind:class="{ active: hover_card==index }">
               <img v-bind:src="people.image" alt="#" v-on:click="showLinkedin(people.link)">
               <p>{{people.name}}</p>
               <p>{{people.position}}</p>
-              <p v-show="hover_card==index" id="info">{{people.info}}</p>
             </li>
+              <p v-if="hover_card>=0" id="info">{{team[hover_card].info}}</p>
           </ul>
         </div>
         
@@ -106,17 +106,17 @@ export default {
   z-index: 10;
 
 }
-#main-wrapper img:hover + .info {
-    display: block;
-}
 .active{
   background-color: rgba(230,230,230,0.6);
   color:black;
   padding: 10px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); 
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5); 
 }
 #info{
+  margin-top: 3%;
   text-align: left;
-  padding: 5px;
+  float: left;
+  z-index:5;
+  min-width:400px!important;
 }
 </style>

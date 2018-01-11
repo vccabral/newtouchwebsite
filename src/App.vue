@@ -1,11 +1,13 @@
 <template>
   <div id="app" v-cloak>
     <div id="router">
-      <router-link to="/"class="logo"><img src="./assets/logo.png" alt="#">
+      <router-link to="/" class="logo">
+        <img src="./assets/logo.png" alt="#" id="green_logo">
+        <img src="./assets/name_logo.png" alt="" id="name_logo">
       </router-link>
-      <router-link to="/about">About</router-link>
-      <router-link to="/people">People</router-link> 
       <router-link to="/contact">Contact</router-link>
+      <router-link to="/people">People</router-link> 
+      <router-link to="/about">About</router-link>
     </div>
     <transition name="fade" duration="1000">
        <router-view></router-view>
@@ -30,7 +32,7 @@ body{
   overflow: hidden;
 }
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: AvenirNext-DemiBold,Helvetica Neue,Helvetica,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -59,11 +61,11 @@ li{
   list-style: none;
 }
 #router{
-  font-size:1em;;
+  font-size:1.1em;;
   height:30px;
   font-weight: bold;
   position:relative;
-  padding:10px 0 30px;
+  padding:10px 3% 30px 6%;
   background-color: rgba(60,60,60,0.5);
   z-index:10;
 }
@@ -72,8 +74,9 @@ li{
   color:white;
   width:10%;
   margin:15px 10px;
-  float: left;
+  float: right;
   padding-bottom: 21px;
+  letter-spacing: 0.12em;
 }
 #router>a:hover{
   border-bottom: solid 5px rgba(255,255,255,0.3);
@@ -83,14 +86,23 @@ li{
 }
 .logo{
   border-bottom:none!important;
+  float: left!important;
+  width:25%!important;
+  min-width: 350px!important;
 }
-.logo>img{
+#green_logo{
   display: block;
   width:50px;
   height:50px;
   float: left;  
   margin:-15px 0 0 50px;
   }
+#name_logo{
+  width:210px;
+  height: 30px;
+  margin:-5px 0 0 10px;
+  float: left;
+}
 footer{
   position:absolute;
   bottom:0;

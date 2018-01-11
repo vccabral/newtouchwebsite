@@ -1,9 +1,9 @@
 <template>
   <div id="about">
   	<div id="main-wrapper">
-  		<h1>About Us</h1>
-  		<p>NewTouch Digital is a health technology building a mobile health and data analytics platform to optimize clinical care for sufferers of neurodegenerative diseases.</p> 
-  		<p>NewTouch Digital is based in Washington D.C. </p>
+  		<h1>ABOUT US</h1>
+  		<p>NewTouch Digital is a health technology building a mobile health and data analytics platform to optimize clinical care for sufferers of neurodegenerative diseases.<br/>
+  		NewTouch Digital is based in Washington D.C.</p>
   		<h1>MISSION</h1>
   		<p>Our mission is to digitally reshape and improve the model of care for a broad range of neurodegenerative diseases by embedding NewTouch’s clinical platform and data analytical tools with doctors, patients, and industry partners. 
 	               </p>	

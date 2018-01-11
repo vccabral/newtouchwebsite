@@ -12,6 +12,7 @@
 	</textarea>
 	<input  id="submit_btn" class="btn_submit" type="submit" value="Submit"> 
       </form>	
+      <p>Email: info@newtouchdigital.com</p>
     </div>
   </div>
 </template>
@@ -21,7 +22,7 @@ export default {
   name: 'Contact',
   data () {
     return {
-      note: `We'll direct your question to the most relevant person, and they will work hard to reply quickly.`
+      note: `TO CONTACT US, PLEASE COMPLETE THE FORM BELOW`
     }
   }
 }
@@ -60,11 +61,11 @@ td{
     margin:2%;
 }
 #msg{
-    width:66%;
+    width:65.5%;
     margin-right: 20%;
 }
 .btn_submit{
-	width:120px;
+	width:180px!important;
 	height:50px;
 	display: block;
 	margin-left: 2%;

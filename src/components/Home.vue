@@ -31,7 +31,7 @@ export default {
 .bg-color{
       width:100%;
       height: 100%;
-      background-color: rgba(13, 70, 83, 0.78);
+      background-color: rgba(13, 70, 83, 0.3);
       position: relative;
       z-index: 2;
 }
