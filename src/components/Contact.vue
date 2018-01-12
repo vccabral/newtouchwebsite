@@ -83,4 +83,26 @@ td{
 .btn_submit:hover{
 	box-shadow: 0px 7px 5px rgba(33,33,33,0.5);
 }
+
+@media screen and (max-device-width: 600px) {
+
+   #main-wrapper{
+    min-height: 70%;
+     margin: 25% auto;
+   }
+  p{
+     font-size: 0.8em;
+  }
+  #main-wrapper input,#msg{
+    width:35%;
+    font-size:0.8em;
+    padding-left: 10px;
+    display: inline-block;
+    margin:2%;
+    }
+    #msg{
+    width:80%;
+    margin-right: 20%;
+    }
+}
 </style>

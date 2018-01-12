@@ -75,10 +75,9 @@ export default {
     position: relative;
     width: 80%;
     min-height: 50%;
-    margin: 8% 10% 10%;
+    margin: 10% 10% 10%;
     padding:3%;
     text-align: left;
-    font-size:1em;
     font-weight: bold;
     background-color: rgba(0,0,0,0.7);
     color:white;
@@ -107,9 +106,9 @@ export default {
 
 }
 .active{
-  background-color: rgba(230,230,230,0.6);
-  color:black;
   padding: 10px;
+  color:black;
+  background-color: rgba(230,230,230,0.6);
   box-shadow: 4px 0 2px 0 rgba(0,0,0,0.5); 
 }
 #info{
@@ -117,11 +116,31 @@ export default {
   box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.5); 
   margin: 0;
   color: black;
+  display: inline-block;
+  line-height: 20px;
   padding: 2% 5%;
   text-align: left;
   float: left;
   z-index:5;
   min-width:350px!important;
-  max-width: 80.3%;
+  width: 80%;
+}
+
+@media screen and (max-device-width: 600px) {
+
+   #main-wrapper{
+    min-height: 80%;
+     margin: 25% auto;
+   }
+    #main-wrapper ul{
+    padding-left: 20px;
+    }
+   #main-wrapper li{
+    min-width: 110px;
+    margin:15px;
+   }
+  p{
+     font-size: 0.8em;
+  }
 }
 </style>

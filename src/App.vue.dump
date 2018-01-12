@@ -1,13 +1,14 @@
 <template>
   <div id="app" v-cloak>
     <div id="router">
+      <img src="./assets/menu.png" alt="#" class="menu">
       <router-link to="/" class="logo">
         <img src="./assets/logo.png" alt="#" id="green_logo">
         <img src="./assets/name_logo.png" alt="" id="name_logo">
       </router-link>
-      <router-link to="/contact">Contact</router-link>
-      <router-link to="/people">People</router-link> 
-      <router-link to="/about">About</router-link>
+      <router-link class="nav" to="/contact">Contact</router-link>
+      <router-link class="nav" to="/people">People</router-link> 
+      <router-link class="nav" to="/about">About</router-link>
     </div>
     <transition name="fade" duration="1000">
        <router-view></router-view>
@@ -28,9 +29,7 @@ export default {
 </script>
 
 <style>
-body{
-  overflow: hidden;
-}
+/*Reset format and global setting*/
 #app {
   font-family: AvenirNext-DemiBold,Helvetica Neue,Helvetica,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -44,22 +43,16 @@ body{
     user-select: none;
   cursor:default;
 }
-[v-cloak] {
-  display: none;
-}
-textarea{
-  resize: none;
-}
-textarea, input{
-  outline: none;
-}
+body{overflow: hidden;}
+[v-cloak] {display: none;}
+textarea{resize: none;}
+textarea, input{outline: none;}
 a:hover,a:visited{text-decoration:none;}
-a{
-  text-decoration: none;
-}
-li{
-  list-style: none;
-}
+a{text-decoration: none;}
+li{list-style: none;}
+img { max-width: 100%;}
+
+/*Global Navbar CSS*/
 #router{
   font-size:1.1em;;
   height:30px;
@@ -87,8 +80,8 @@ li{
 .logo{
   border-bottom:none!important;
   float: left!important;
-  width:25%!important;
-  min-width: 350px!important;
+  width:25%;
+  min-width: 350px;
 }
 #green_logo{
   display: block;
@@ -103,11 +96,12 @@ li{
   margin:0px 0 0 10px;
   float: left;
 }
+
 footer{
   position:absolute;
   bottom:0;
-  width:98%;
-  font-size:0.9em;
+  width:100%;
+  font-size:0.8em;
   background-color: rgba(50,50,50,0.6);
   color:white;
   padding:10px 1% 5px;
@@ -116,10 +110,50 @@ footer{
   z-index:12;
 }
 
+/*Page transition animation*/
 .fade-enter-active, .fade-leave-active {
   transition: opacity .5s;
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
+
+.menu{
+  display: none;
+}
+
+@media screen and (max-device-width: 600px) {
+  .nav{
+    display: none!important;
+  }
+  .menu{
+    display: block;
+    width: 35px;
+    height:25px;
+    margin-top: 10px;
+    float: left;
+  }
+  .logo{
+    display: block;
+    margin: -10px 0;
+    padding: 0;
+    min-width: 250px;
+  }
+  #green_logo{
+  display: block;
+  width:35px;
+  height:35px;
+  margin:-10px 0 0 35px;
+  }
+  #name_logo{
+  width:150px;
+  height: 20px;
+  margin:0px 0 0 10px;
+  float: left;
+  }
+  footer{
+  display: none;
+  }
+}
+
 </style>

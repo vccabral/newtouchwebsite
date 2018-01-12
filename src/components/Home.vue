@@ -56,6 +56,7 @@ export default {
 .more{
   width: 150px;
   color:white;
+  font-weight: bold;
   background-color: transparent;
   border: solid white 3px;
   border-radius: 20px;
@@ -68,10 +69,19 @@ export default {
   z-index: 4;
 }
 
-@media screen and (max-device-width: 1080px) {
+@media screen and (max-device-width: 600px) {
+  #logo{
+    display: none;
+  }
   #home>p{
-    font-size:1.5em;
-    width:50%;
+    font-size: 1.8em;
+    width:20%;
+    margin: 35% 25% 15%;
+    text-align: left;
+  }
+  .more{
+    display: block;
+    margin: 0 25%;
   }
 }
 </style>

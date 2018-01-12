@@ -49,4 +49,14 @@ h1{
     margin-bottom: 1%;
     line-height: 35px;
 }
+
+@media screen and (max-device-width: 600px) {
+
+   #main-wrapper{
+     margin: 25% auto;
+   }
+  p{
+     font-size: 0.8em;
+  }
+}
 </style>
