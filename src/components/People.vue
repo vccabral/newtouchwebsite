@@ -5,8 +5,10 @@
           <ul>
             <li v-for="(people,index) in team" v-on:mouseover="hover_card = index"
               v-on:mouseout="hover_card=-1" v-bind:class="{ active: hover_card==index }">
-              <img v-bind:src="people.image" alt="#" v-on:click="showLinkedin(people.link)">
+              <img v-bind:src="people.image" alt="#">
               <p>{{people.name}}</p>
+              <img src="../assets/linkedin-logo.png" class="linkedin-logo" Title="LinkedIn Profile" 
+              v-if="hover_card==index" v-on:click="showLinkedin(people.link)">
               <p>{{people.position}}</p>
             </li>
               <p v-if="hover_card>=0" id="info">{{team[hover_card].info}}</p>
@@ -74,7 +76,7 @@ export default {
 #main-wrapper{
     position: relative;
     width: 80%;
-    min-height: 50%;
+    min-height: 60%;
     margin: 10% 10% 10%;
     padding:3%;
     text-align: left;
@@ -101,12 +103,17 @@ export default {
   border-radius: 200px;
   width: 120px;
   height:120px;
-  cursor: pointer;
   z-index: 10;
-
+}
+.linkedin-logo{
+  width: 20px!important;
+  height: 20px!important;
+  cursor: pointer;
+  float: right;
+  margin-right: 20px;
 }
 .active{
-  padding: 10px;
+  padding: 10px 0;
   color:black;
   background-color: rgba(230,230,230,0.6);
   box-shadow: 4px 0 2px 0 rgba(0,0,0,0.5); 
@@ -123,7 +130,7 @@ export default {
   float: left;
   z-index:5;
   min-width:350px!important;
-  width: 80%;
+  width: 78%;
 }
 
 @media screen and (max-device-width: 600px) {
@@ -131,6 +138,7 @@ export default {
    #main-wrapper{
     min-height: 80%;
      margin: 25% auto;
+    pointer-events: none;
    }
     #main-wrapper ul{
     padding-left: 20px;

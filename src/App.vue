@@ -2,10 +2,10 @@
   <div id="app" v-cloak>
     <div id="router">
       <img src="./assets/menu.png" alt="#" class="menu_btn" v-on:click="showMenu = !showMenu">
-      <router-link to="/" class="logo">
+      <a @click='routeTo("/")' class="logo">
         <img src="./assets/logo.png" alt="#" id="green_logo">
         <img src="./assets/name_logo.png" alt="" id="name_logo">
-      </router-link>
+      </a>
       <router-link class="nav" to="/contact">Contact</router-link>
       <router-link class="nav" to="/people">People</router-link> 
       <router-link class="nav" to="/about">About</router-link>

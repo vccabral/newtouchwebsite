@@ -43,7 +43,7 @@ td{
 #main-wrapper{
     position: relative;
     width: 80%;
-    margin: 10% 10%;
+    margin: 8% 10%;
     padding:3%;
     text-align: left;
     font-size:1em;
