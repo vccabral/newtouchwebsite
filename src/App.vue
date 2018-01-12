@@ -12,9 +12,9 @@
     </div>
     <transition name="slide-fade" duration="300"> 
     <div id="mobile-menu" v-show="showMenu">
-        <router-link to="/about">About</router-link>
-        <router-link to="/people">People</router-link> 
-        <router-link to="/contact">Contact</router-link>
+        <a @click='routeTo("/about")'>About</a>
+        <a @click='routeTo("/people")'>People</a> 
+        <a @click='routeTo("/contact")'>Contact</a>
       </div>
      </transition> 
     <transition name="fade" duration="1000">
@@ -35,8 +35,11 @@ export default {
       currentYear: new Date().getYear() + 1900
     }
   },
-  mounted: function () {
-    this.showMenu = false
+  methods: {
+    routeTo: function (next) {
+      this.showMenu = false
+      this.$router.push(next)
+    }
   }
 }
 </script>
@@ -185,7 +188,7 @@ footer{
   #mobile-menu a{
     width:100%;
     color:white;
-    margin:-10px 5% 10px;
+    margin:-10px 8% 10px;
     border: none!important;
   }
   .mask{
