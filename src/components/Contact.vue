@@ -72,7 +72,7 @@ td{
 	margin-top:20px;
 	line-height:35px;
 	text-align:center;
-	background-color:#296426;
+        background-color: rgba(41,100,38,1);
 	color:#fff;
 	font-size:16px;
 	border: 0px;

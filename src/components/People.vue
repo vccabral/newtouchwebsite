@@ -142,5 +142,9 @@ export default {
   p{
      font-size: 0.8em;
   }
+
+#info{
+  display: none!important;
+}
 }
 </style>

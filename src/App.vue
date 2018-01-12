@@ -1,7 +1,7 @@
 <template>
   <div id="app" v-cloak>
     <div id="router">
-      <img src="./assets/menu.png" alt="#" class="menu">
+      <img src="./assets/menu.png" alt="#" class="menu_btn" v-on:click="showMenu = !showMenu">
       <router-link to="/" class="logo">
         <img src="./assets/logo.png" alt="#" id="green_logo">
         <img src="./assets/name_logo.png" alt="" id="name_logo">
@@ -10,10 +10,19 @@
       <router-link class="nav" to="/people">People</router-link> 
       <router-link class="nav" to="/about">About</router-link>
     </div>
+    <transition name="slide-fade" duration="300"> 
+    <div id="mobile-menu" v-show="showMenu">
+        <router-link to="/about">About</router-link>
+        <router-link to="/people">People</router-link> 
+        <router-link to="/contact">Contact</router-link>
+      </div>
+     </transition> 
     <transition name="fade" duration="1000">
        <router-view></router-view>
     </transition>
-    <footer>Copyright {{current_year}} © New Touch Digital, Inc. All rights reserved.</footer>
+
+    <div class="mask" v-show="showMenu" v-on:click="showMenu = false"></div>
+    <footer>Copyright {{currentYear}} © New Touch Digital, Inc. All rights reserved.</footer>
   </div>
 </template>
 
@@ -22,8 +31,12 @@ export default {
   name: 'app',
   data () {
     return {
-      current_year: new Date().getYear() + 1900
+      showMenu: false,
+      currentYear: new Date().getYear() + 1900
     }
+  },
+  mounted: function () {
+    this.showMenu = false
   }
 }
 </script>
@@ -117,16 +130,21 @@ footer{
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
-
-.menu{
+.menu_btn{
+  display: none;
+}
+#mobile-menu{
   display: none;
 }
 
 @media screen and (max-device-width: 600px) {
+  #router{
+  background-color: rgba(41,100,38,1);
+  }
   .nav{
     display: none!important;
   }
-  .menu{
+  .menu_btn{
     display: block;
     width: 35px;
     height:25px;
@@ -135,7 +153,7 @@ footer{
   }
   .logo{
     display: block;
-    margin: -10px 0;
+    margin: -10px 0 0;
     padding: 0;
     min-width: 250px;
   }
@@ -148,12 +166,47 @@ footer{
   #name_logo{
   width:150px;
   height: 20px;
-  margin:0px 0 0 10px;
+  margin:0 0 0 10px;
   float: left;
   }
   footer{
   display: none;
   }
+  #mobile-menu{
+  display: block;
+  position: absolute;
+  width: 100%;
+  background-color: rgba(41,100,38,1);
+  color: white;
+  font-weight: bold;
+  padding-bottom: 10px;
+  z-index:15;
+  }
+  #mobile-menu a{
+    width:100%;
+    color:white;
+    margin:-10px 5% 10px;
+    border: none!important;
+  }
+  .mask{
+      min-width:100%;
+      min-height: 100%;
+      background-color: rgba(0,0,0,0.8);
+      position: absolute;
+      z-index: 12;
+  }
+  .slide-fade-enter-active{
+    transition: all .5s ease;
+  }
+  .slide-fade-leave-active{
+    transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  }
+.slide-fade-enter, .slide-fade-leave-to{
+  transform: translateY(-10px);
+  opacity: 0;
+  }
+
+
 }
 
 </style>
