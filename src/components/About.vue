@@ -33,11 +33,11 @@ export default {
 #main-wrapper{
     position: relative;
     width: 80%;
-    margin: 10% 10%;
+    margin: 10% auto;
     padding:0.5% 3% 3%;
     text-align: left;
     font-size:1.2em;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.5);
     color:white;
 }
 h1{

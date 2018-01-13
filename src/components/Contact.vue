@@ -22,7 +22,7 @@ export default {
   name: 'Contact',
   data () {
     return {
-      note: `TO CONTACT US, PLEASE COMPLETE THE FORM BELOW`
+      note: `TO CONTACT US  PLEASE COMPLETE THE FORM BELOW`
     }
   }
 }
@@ -48,7 +48,7 @@ td{
     text-align: left;
     font-size:1em;
     font-weight: bold;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.5);
     color:white;
 }
 #main-wrapper input,#msg{
@@ -85,7 +85,6 @@ td{
 }
 
 @media screen and (max-device-width: 600px) {
-
    #main-wrapper{
     min-height: 70%;
      margin: 25% auto;

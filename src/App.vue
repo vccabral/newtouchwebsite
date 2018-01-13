@@ -4,7 +4,7 @@
       <img src="./assets/menu.png" alt="#" class="menu_btn" v-on:click="showMenu = !showMenu">
       <a @click='routeTo("/")' class="logo">
         <img src="./assets/logo.png" alt="#" id="green_logo">
-        <img src="./assets/name_logo.png" alt="" id="name_logo">
+        <img src="./assets/Logo_Final_orange_transparent.png" alt="" id="name_logo">
       </a>
       <router-link class="nav" to="/contact">Contact</router-link>
       <router-link class="nav" to="/people">People</router-link> 
@@ -75,7 +75,7 @@ img { max-width: 100%;}
   font-weight: bold;
   position:relative;
   padding:10px 3% 30px 6%;
-  background-color: rgba(60,60,60,0.5);
+  background-color: rgba(60,60,60,0.0);
   z-index:10;
 }
 #router>a{
@@ -96,8 +96,9 @@ img { max-width: 100%;}
 .logo{
   border-bottom:none!important;
   float: left!important;
-  width:25%;
-  min-width: 350px;
+  width:30%;
+  min-width: 500px;
+  cursor: pointer;
 }
 #green_logo{
   display: block;
@@ -107,9 +108,9 @@ img { max-width: 100%;}
   margin:-15px 0 0 50px;
   }
 #name_logo{
-  width:210px;
-  height: 25px;
-  margin:0px 0 0 10px;
+  width:270px;
+  height: 35px;
+  margin:-5px 0 0 10px;
   float: left;
 }
 
@@ -142,7 +143,7 @@ footer{
 
 @media screen and (max-device-width: 600px) {
   #router{
-  background-color: rgba(41,100,38,1);
+  background-color: rgba(0,0,0,0.5);
   }
   .nav{
     display: none!important;
@@ -156,19 +157,19 @@ footer{
   }
   .logo{
     display: block;
-    margin: -10px 0 0;
+    margin: 0px 0 0;
     padding: 0;
-    min-width: 250px;
+    min-width: 300px;
   }
   #green_logo{
   display: block;
-  width:35px;
-  height:35px;
-  margin:-10px 0 0 35px;
+  width:30px;
+  height:30px;
+  margin: -5px 0 0 35px;
   }
   #name_logo{
-  width:150px;
-  height: 20px;
+  width:180px;
+  height: 25px;
   margin:0 0 0 10px;
   float: left;
   }
@@ -179,10 +180,11 @@ footer{
   display: block;
   position: absolute;
   width: 100%;
-  background-color: rgba(41,100,38,1);
+  background-color: rgba(0,0,0,0.5);
   color: white;
   font-weight: bold;
-  padding-bottom: 10px;
+  padding: 15px 0;
+  line-height: 20px;
   z-index:15;
   }
   #mobile-menu a{
@@ -194,8 +196,9 @@ footer{
   .mask{
       min-width:100%;
       min-height: 100%;
-      background-color: rgba(0,0,0,0.8);
+      background-color: rgba(0,0,0,0.85);
       position: absolute;
+      margin-top: 50px;
       z-index: 12;
   }
   .slide-fade-enter-active{

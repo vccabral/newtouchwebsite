@@ -1,9 +1,11 @@
 <template>
   <div id="home">
+    <div id="main-wrapper">
     <img id="logo" src="../assets/Logo_Final_orange_transparent.png" alt="#">
     <p>THE NEXT STEP IN DIGITAL HEALTHCARE</p>
     <router-link to="/about" class="more"> Explore More
     </router-link>
+    </div>
     <div class="bg-color"></div>
   </div>
 </template>
@@ -21,33 +23,38 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 #home{
-    background: url(../assets/bg_home.jpg) no-repeat;
+    background: url(../assets/bg_about.jpg) no-repeat;
     width:100%;
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
     background-size: cover;
     justify-content: center;
 }
-.bg-color{
-      width:100%;
-      height: 100%;
-      background-color: rgba(13, 70, 83, 0.3);
-      position: relative;
-      z-index: 2;
+#main-wrapper{
+    position: relative;
+    width: 60%;
+    min-height: 50%;
+    margin: 10% auto 10%;
+    padding:3%;
+    text-align: left;
+    font-weight: bold;
+    background-color: rgba(0,0,0,0.0);
+    color:white;
 }
 #logo{
-  width: 60%;
+  width: 80%;
   position: relative;
   float: left;
-  margin:20% 0 0 20%;
+  margin:5% 0 0 10%;
   z-index: 4;
 }
-#home>p{
+#home p{
   width: 60%;
   color:white;
-  font-size:1.9em;
+  font-size:2em;
   font-weight: bolder;
   font-family: 'Candal', sans-serif;
+  text-align: center;
   position: relative;
   float: left;
   margin:3% 0 0 20%;
@@ -62,6 +69,7 @@ export default {
   border-radius: 20px;
   font-size:1em;
   position: relative;
+  text-align: center;
   float: left;
   padding: 10px 20px 10px 20px;
   cursor: pointer; 
@@ -70,18 +78,21 @@ export default {
 }
 
 @media screen and (max-device-width: 600px) {
+#main-wrapper{
+  margin-top: 35%;
+}
   #logo{
     display: none;
   }
-  #home>p{
+  #home p{
     font-size: 1.8em;
     width:20%;
-    margin: 35% 25% 15%;
+    margin: 15% auto 15%;
     text-align: left;
   }
   .more{
     display: block;
-    margin: 0 25%;
+    margin: 0 10%;
   }
 }
 </style>
