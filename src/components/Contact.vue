@@ -42,7 +42,7 @@ td{
 }
 #main-wrapper{
     position: relative;
-    width: 80%;
+    width: 70%;
     margin: 8% 10%;
     padding:3%;
     text-align: left;
@@ -63,6 +63,7 @@ td{
 #msg{
     width:65.5%;
     margin-right: 20%;
+    overflow: hidden;
 }
 .btn_submit{
 	width:180px!important;

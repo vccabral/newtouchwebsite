@@ -109,8 +109,8 @@ img { max-width: 100%;}
   }
 #name_logo{
   width:270px;
-  height: 35px;
-  margin:-5px 0 0 10px;
+  height: 30px;
+  margin:-3px 0 0 10px;
   float: left;
 }
 

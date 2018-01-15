@@ -66,7 +66,7 @@ export default {
 
 <style scoped>
 #people{
-    background: url(../assets/bg4.jpg) no-repeat;
+    background: url(../assets/bg_people.jpg) no-repeat;
     width:100%;
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
