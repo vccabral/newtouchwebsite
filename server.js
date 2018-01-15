@@ -53,10 +53,8 @@ app.get('/contactform', function (req, res) {
 
 });
 */
-app.listen(8080, function (err) {
-    if (err) {
-        console.log(err);
-    } else {
-        console.log("Listening on port on 8080");
-    }
-});
+
+var port = process.env.PORT || 5000;
+app.listen(port);
+ 
+console.log('server started '+ port);
