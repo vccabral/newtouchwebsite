@@ -141,7 +141,7 @@ footer{
   display: none;
 }
 
-@media screen and (max-device-width: 600px) {
+@media screen and (max-device-width: 1000px) {
   #router{
   background-color: rgba(0,0,0,0.5);
   }
@@ -196,7 +196,7 @@ footer{
   .mask{
       min-width:100%;
       min-height: 100%;
-      background-color: rgba(0,0,0,0.85);
+      background-color: rgba(0,0,0,0.75);
       position: absolute;
       margin-top: 50px;
       z-index: 12;

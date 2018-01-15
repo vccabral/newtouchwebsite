@@ -77,7 +77,7 @@ export default {
   z-index: 4;
 }
 
-@media screen and (max-device-width: 600px) {
+@media screen and (max-device-width: 1000px) {
 #main-wrapper{
   margin-top: 35%;
 }
