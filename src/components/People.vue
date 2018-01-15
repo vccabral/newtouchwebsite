@@ -6,7 +6,7 @@
             <li v-for="(people,index) in team" v-on:mouseover="hover_card = index"
               v-on:mouseout="hover_card=-1" v-bind:class="{ active: hover_card==index }">
               <img v-bind:src="people.image" alt="#">
-              <p>{{people.name}}</p>
+              <p style="font-size:1.4em">{{people.name}}</p>
               <img src="../assets/linkedin-logo.png" class="linkedin-logo" Title="LinkedIn Profile" 
               v-if="hover_card==index" v-on:click="showLinkedin(people.link)">
               <p>{{people.position}}</p>
@@ -116,12 +116,12 @@ export default {
   margin-top: -10px;
   padding: 10px 0;
   color:black;
-  background-color: rgba(230,230,230,0.6);
+  background-color: rgba(230,230,230,0.8);
   box-shadow: 4px 0 0px 0 rgba(0,0,0,0.5); 
 }
 #info{
-  background-color: rgba(230,230,230,0.6);
-  box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.5); 
+  background-color: rgba(230,230,230,0.8);
+  box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.3); 
   margin: 0;
   color: black;
   display: inline-block;
