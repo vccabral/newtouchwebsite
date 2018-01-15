@@ -61,19 +61,18 @@ export default {
   z-index: 4;
 }
 .more{
-  width: 150px;
+  width: 20%;
   color:white;
   font-weight: bold;
   background-color: transparent;
   border: solid white 3px;
   border-radius: 20px;
-  font-size:1em;
   position: relative;
   text-align: center;
   float: left;
   padding: 10px 20px 10px 20px;
   cursor: pointer; 
-  margin:8% 0 0 42%;
+  margin:6% 38%;
   z-index: 4;
 }
 
