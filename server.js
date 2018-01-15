@@ -1,7 +1,7 @@
 // server.js
 var express = require('express');
-var nodemailer = require('nodemailer');
-
+//var nodemailer = require('nodemailer');
+/*
 var smtpTransport = nodemailer.createTransport("SMTP", {
 
     service: 'Gmail',
@@ -12,14 +12,14 @@ var smtpTransport = nodemailer.createTransport("SMTP", {
         pass: 'GMAIL_PASS'
     }
 });
-
-
+*/
 var path = require('path');
 var serveStatic = require('serve-static');
 
 app = express();
 app.use(serveStatic(__dirname + "/dist"));
 
+/*
 app.get('/', function (req, res) {
     res.sendfile('./dist/index.html');
 });
@@ -52,7 +52,7 @@ app.get('/contactform', function (req, res) {
     });
 
 });
-
+*/
 app.listen(8080, function (err) {
     if (err) {
         console.log(err);
