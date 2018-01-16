@@ -48,13 +48,13 @@ app.post('/contactform', function (req, res) {
     
    res.json({ success: 1 });
 });
-/*
-var port = config.port || 5000;
+
+var port = process.env.port || 5000;
 app.listen(port);
  
 console.log('server started '+ port);
-*/
 
+/*
 var http = require('http');
 http.globalAgent.maxSockets = 10;
 var port = 5000;
@@ -64,20 +64,21 @@ app.set('port', port);
  * Create HTTP server.
  */
 
-var server = http.createServer(app);
+//var server = http.createServer(app);
 
 /**
  * Listen on provided port, on all network interfaces.
  */
 
-server.listen(port);
-server.on('error', onError);
-server.on('listening', onListening);
+// server.listen(port);
+// server.on('error', onError);
+// server.on('listening', onListening);
 
 /**
  * Event listener for HTTP server "error" event.
  */
 
+/*
 function onError(error) {
   if (error.syscall !== 'listen') {
     throw error;
@@ -105,7 +106,7 @@ function onError(error) {
 /**
  * Event listener for HTTP server "listening" event.
  */
-
+/*
 function onListening() {
   var addr = server.address();
   var bind = typeof addr === 'string'
@@ -114,3 +115,4 @@ function onListening() {
 }
 
 
+*/
