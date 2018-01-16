@@ -59,7 +59,7 @@ export default {
         },
         body: JSON.stringify(data)
       }).then(res => {
-        alert('Your message has been sent successfully, thank you for your advice !')
+        alert('Your message has been sent successfully, thank you for your feedback !')
         location.reload()
         // console.log('Request complete! response:', res)
       }).catch(function (err) {
