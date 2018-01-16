@@ -11,10 +11,6 @@ app.use(serveStatic(__dirname + "/dist"));
 app.use(bodyParser.json({ type: 'application/x-www-form-urlencoded'})); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
-app.get('/', function (req, res)) {
-  return 
-}
-
 //send email once received contact form
 app.post('/contactform', function (req, res) {
         let data = req.body
