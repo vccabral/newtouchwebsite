@@ -85,12 +85,13 @@ export default {
   }
   #home p{
     font-size: 1.8em;
-    width:20%;
+    width:50%;
     margin: 15% auto 15%;
     text-align: left;
   }
   .more{
     display: block;
+    min-width: 120px;
     margin: 0 10%;
   }
 }

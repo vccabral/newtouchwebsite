@@ -22,7 +22,7 @@
     </transition>
 
     <div class="mask" v-show="showMenu" v-on:click="showMenu = false"></div>
-    <footer>Copyright {{currentYear}} © New Touch Digital, Inc. All rights reserved.</footer>
+    <footer>Copyright {{currentYear}} 漏 New Touch Digital, Inc. All rights reserved.</footer>
   </div>
 </template>
 

@@ -1,18 +1,8 @@
 // server.js
 var express = require('express');
-//var nodemailer = require('nodemailer');
-/*
-var smtpTransport = nodemailer.createTransport("SMTP", {
+var nodemailer = require('nodemailer');
+var dotenv = require('dotenv')
 
-    service: 'Gmail',
-    auth: {
-        // enter your gmail account
-        user: 'GMAIL_USER',
-        // enter your gmail password
-        pass: 'GMAIL_PASS'
-    }
-});
-*/
 var path = require('path');
 var serveStatic = require('serve-static');
 
@@ -27,34 +17,100 @@ app.get('/', function (req, res) {
 app.get('/', function (req, res) {
     res.sendfile('./public/index.html');
 });
+*/
 
 //send email once received contact form
 app.get('/contactform', function (req, res) {
+     let transporter = nodemailer.createTransport(
+        {
+            host: 'smtp.hotmail.com',
+            port: 587,
+            secure: false,
+            auth: {
+                user:  process.env.hotmail_user,
+                pass: process.env.hotmail_pass
+            } 
+        });
 
-    var mailOptions = {
-        to: req.query.to,
-        subject: 'Contact Form Message',
-        from: "Contact Form Request" + "<" + req.query.from + '>',
-        html:  "From: " + req.query.firstname  + " " + req.query.lastname+ "<br>" +
-               "User's email: " + req.query.user + "<br>" +    
-                "Message: " + req.query.text
-    }
+        var mailOptions = {
+            from: 'viddamaowj@hotmail.com', // sender address
+            to: 'viddamao@gmail.com', // list of receivers
+            subject: 'Contact form', // Subject line
+            text: data.name + "\n" +  data.publish_time + "\n" + data.email + "\n " + data.content // plaintext body
+            };
 
-    console.log(mailOptions);
-    smtpTransport.sendMail(mailOptions, function (err, response) {
-        if (err) {
-            console.log(err);
-            res.end("error");
+    transporter.sendMail(mailOptions, function (error, info) {
+        if (error) {
+            console.log(error);
         } else {
-            console.log("Message sent: " + response.message);
-            res.end("sent");
+            console.log('Message sent: ' + info.response);
         }
     });
 
 });
-*/
-
-var port = process.env.PORT || 5000;
+/*
+var port = config.port || 5000;
 app.listen(port);
  
 console.log('server started '+ port);
+*/
+
+var http = require('http');
+http.globalAgent.maxSockets = 10;
+var port = 18080;
+app.set('port', port);
+
+/**
+ * Create HTTP server.
+ */
+
+var server = http.createServer(app);
+
+/**
+ * Listen on provided port, on all network interfaces.
+ */
+
+server.listen(port);
+server.on('error', onError);
+server.on('listening', onListening);
+
+/**
+ * Event listener for HTTP server "error" event.
+ */
+
+function onError(error) {
+  if (error.syscall !== 'listen') {
+    throw error;
+  }
+
+  var bind = typeof port === 'string'
+    ? 'Pipe ' + port
+    : 'Port ' + port;
+
+  // handle specific listen errors with friendly messages
+  switch (error.code) {
+    case 'EACCES':
+      console.error(bind + ' requires elevated privileges');
+      process.exit(1);
+      break;
+    case 'EADDRINUSE':
+      console.error(bind + ' is already in use');
+      process.exit(1);
+      break;
+    default:
+      throw error;
+  }
+}
+
+/**
+ * Event listener for HTTP server "listening" event.
+ */
+
+function onListening() {
+  var addr = server.address();
+  var bind = typeof addr === 'string'
+    ? 'pipe ' + addr
+    : 'port ' + addr.port;
+}
+
+

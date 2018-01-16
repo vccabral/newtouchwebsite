@@ -9,7 +9,7 @@
               <p style="font-size:1.4em">{{people.name}}</p>
               <img src="../assets/linkedin-logo.png" class="linkedin-logo" Title="LinkedIn Profile" 
               v-if="hover_card==index" v-on:click="showLinkedin(people.link)">
-              <p>{{people.position}}</p>
+              <p><span>{{people.position1}}&nbsp;&&nbsp;</span><br><span>{{people.position2}}</span></p>
             </li>
               <p v-if="hover_card>=0" id="info">{{team[hover_card].info}}</p>
           </ul>
@@ -27,21 +27,24 @@ export default {
       team: [
         {
           name: 'Atila Omer',
-          position: 'Co-Founder & President  ',
+          position1: 'Co-Founder',
+          position2: 'President  ',
           link: 'https://www.linkedin.com/in/atila-omer-16b808/',
           image: require('../assets/people/atila.jpg'),
           info: `Atila is a founder and President of NewTouch Digital.  Prior to NewTouch Atila co-founded Collaborative Fusion Inc. (CFI), a technology firm which developed incident management software for identifying, alerting and coordination emergency personnel in times of disaster. From 2001 to 2011, Atila served as CEO of CFI which provided technology solutions to the public sector for local, state, and federal governmental agencies. In 2011, CFI was acquired by the Intermedix Corporation, a company owned by private equity firm Thomas H, Lee. Following the acquisition of CFI, Atila served as a Senior Vice President and was responsible for leading the Intermedix’ EMSystems Division. Atila holds a B.S. in Finance from Wayne State University, and an MBA from Carnegie Mellon University. `
         },
         {
           name: 'Alex Ksendzovsky, MD',
-          position: 'Co-Founder & Chief Science Officer',
+          position1: 'Co-Founder',
+          position2: 'Chief Science Officer',
           link: 'https://www.linkedin.com/in/alexander-ksendzovsky-31732711/',
           image: require('../assets/people/alex.jpg'),
           info: `Alexander Ksendzovsky, MD is a founder and Chief Science Officer of NewTouch Digital. Alex graduated from Emory University with a B.S. Neuroscience and Philosophy where he worked in several research laboratories focused on Parkinson’s disease. Alex graduated with an M.D. with distinction in research from The Chicago Medical School. Alex is currently a senior Resident Physician in the Department of Neurosurgery at the University of Virginia and Surgical Neurology Branch at the National Institutes of Health (NIH). He is pursuing an enfolded Ph.D. in molecular physiology and biological physics where he is focused on molecular and physiological mechanisms of epilepsy. Alex has published in central nervous system oncology, epilepsy, functional neurosurgery and pediatrics.  `
         },
         {
           name: 'Jonathan Pomeraniec, MD',
-          position: 'Co-Founder & Chief Medical Officer',
+          position1: 'Co-Founder',
+          position2: 'Chief Medical Officer',
           link: 'https://www.linkedin.com/in/jonathan-pomeraniec-785a294/',
           image: require('../assets/people/jon.png'),
           info: `Jonathan Pomeraniec, MD/MBA is a founder and Chief Medical Officer of NewTouch Digital. After completing undergraduate work at the Wharton School at the University of Pennsylvania, Jonathan worked as an analyst at Lehman Brothers and Barclays Capital. Jonathan transitioned to medicine by completing a postbaccalaureate degree at Columbia University and subsequently pursued an enfolded MD/MBA degree at the University of Virginia (UVA) School of Medicine and Darden School of Business. Jonathan is currently a resident in the joint UVA/National Institutes of Health (NIH) Neurosurgery residency program. `
@@ -87,6 +90,10 @@ export default {
 #main-wrapper>p{
   font-size:1.5em;
   margin:10px 0 2%;
+}
+#main-wrapper>p>span{
+   display: block;
+   width:100%;
 }
 #main-wrapper>ul{
   margin:10px 0 0;
@@ -143,6 +150,7 @@ export default {
    }
     #main-wrapper ul{
     padding-left: 20px;
+    font-size:0.5em;
     }
    #main-wrapper li{
     min-width: 110px;
