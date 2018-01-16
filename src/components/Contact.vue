@@ -59,8 +59,11 @@ export default {
         },
         body: JSON.stringify(data)
       }).then(res => {
-        console.log('Request complete! response:', res)
+        alert('Your message has been sent successfully, thank you for your advice !')
+        location.reload()
+        // console.log('Request complete! response:', res)
       }).catch(function (err) {
+        alert('Connection Error, please try again later')
         console.log('Fetch Error :-S', err)
       })
     }
