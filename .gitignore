@@ -5,6 +5,7 @@ yarn-debug.log*
 yarn-error.log*
 /test/unit/coverage/
 production.json
+.env
 
 # Editor directories and files
 .idea
