@@ -4,9 +4,9 @@
     <p>{{note}}</p>
        <form action="localhost:8080/contactform"
        method="POST">
- 	<input type="text" placeholder="First Name" v-model="first">
- 	<input type="text" placeholder="Last Name"v-model="last">
- 	<input type="text" placeholder="Company Name" v-model="company">
+ 	<input type="text" placeholder="First Name" v-model="firstName">
+ 	<input type="text" placeholder="Last Name"v-model="lastName">
+ 	<input type="text" placeholder="Company Name" v-model="companyName">
  	<input type="text" placeholder="Email" v-model="email">
  	<textarea type="text" placeholder="Your Message" rows="3" id="msg" v-model="msg"  
          v-bind:class="{red_outline:msg_length==150}"></textarea>
@@ -24,9 +24,9 @@ export default {
   data () {
     return {
       note: `TO CONTACT US  PLEASE COMPLETE THE FORM BELOW`,
-      first: '',
-      last: '',
-      company: '',
+      firstName: '',
+      lastName: '',
+      companyName: '',
       email: '',
       msg: ''
     }
@@ -45,7 +45,24 @@ export default {
   },
   methods: {
     submit_form: function () {
-      alert(this.msg)
+      let data = {
+        'name': this.firstName + '  ' + this.lastName,
+        'time': new Date(),
+        'companyName': this.companyName,
+        'email': this.email,
+        'msg': this.msg
+      }
+      fetch('/contactform', {
+        method: 'POST',
+        headers: {
+          'Content-type': 'application/x-www-form-urlencoded; charset=UTF-8'
+        },
+        body: JSON.stringify(data)
+      }).then(res => {
+        console.log('Request complete! response:', res)
+      }).catch(function (err) {
+        console.log('Fetch Error :-S', err)
+      })
     }
   }
 }

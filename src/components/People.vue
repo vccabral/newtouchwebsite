@@ -6,7 +6,7 @@
             <li v-for="(people,index) in team" v-on:mouseover="hover_card = index"
               v-on:mouseout="hover_card=-1" v-bind:class="{ active: hover_card==index }">
               <img v-bind:src="people.image" alt="#">
-              <p style="font-size:1.4em">{{people.name}}</p>
+              <p style="font-size:1.3em">{{people.name}}</p>
               <img src="../assets/linkedin-logo.png" class="linkedin-logo" Title="LinkedIn Profile" 
               v-if="hover_card==index" v-on:click="showLinkedin(people.link)">
               <p><span>{{people.position1}}&nbsp;&&nbsp;</span><br><span>{{people.position2}}</span></p>
