@@ -3,7 +3,7 @@
     <div id="router">
       <img src="./assets/menu.png" alt="#" class="menu_btn" v-on:click="showMenu = !showMenu">
       <a @click='routeTo("/")' class="logo">
-        <img src="./assets/logo.png" alt="#" id="green_logo">
+        <img src="./assets/logo2.png" alt="#" id="green_logo">
         <img src="./assets/Logo_Final_orange_transparent.png" alt="" id="name_logo">
       </a>
       <router-link class="nav" to="/contact">Contact</router-link>
@@ -75,23 +75,23 @@ img { max-width: 100%;}
   font-weight: bold;
   position:relative;
   padding:10px 3.5% 30px 6%;
-  background-color: rgba(60,60,60,0.0);
+  background-color: rgba(210,210,210,0.8);
   z-index:10;
 }
 #router>a{
   display: block;
-  color:white;
+  color:black;
   width:10%;
   margin:15px 10px;
   float: right;
-  padding-bottom: 21px;
+  padding-bottom: 17px;
   letter-spacing: 0.12em;
 }
 #router>a:hover{
-  border-bottom: solid 5px rgba(255,255,255,0.3);
+  border-bottom: solid 5px rgba(0,0,0,0.3);
 }
 .router-link-exact-active{
-  border-bottom: solid 5px white;
+  border-bottom: solid 5px black;
 }
 .logo{
   border-bottom:none!important;
@@ -108,9 +108,9 @@ img { max-width: 100%;}
   margin:-15px 0 0 50px;
   }
 #name_logo{
-  width:270px;
-  height: 30px;
-  margin:-3px 0 0 10px;
+  width:300px;
+  height: 33px;
+  margin:-5px 0 0 10px;
   float: left;
 }
 
