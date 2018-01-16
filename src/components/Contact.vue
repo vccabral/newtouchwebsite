@@ -2,8 +2,7 @@
   <div id="contact">
     <div id="main-wrapper">
     <p>{{note}}</p>
-       <form action="localhost:8080/contactform"
-       method="POST">
+       <form>
  	<input type="text" placeholder="First Name" v-model="firstName">
  	<input type="text" placeholder="Last Name"v-model="lastName">
  	<input type="text" placeholder="Company Name" v-model="companyName">
