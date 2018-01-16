@@ -49,7 +49,7 @@ app.post('/contactform', function (req, res) {
    res.json({ success: 1 });
 });
 
-var port = process.env.port || 8080;
+var port =process.env.PORT || 5000
 app.listen(port);
  
 console.log('server started '+ port);
