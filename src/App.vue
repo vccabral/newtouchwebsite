@@ -74,7 +74,7 @@ img { max-width: 100%;}
   height:30px;
   font-weight: bold;
   position:relative;
-  padding:10px 3.5% 30px 6%;
+  padding:10px 5% 30px 6%;
   background-color: rgba(210,210,210,0.8);
   z-index:10;
 }

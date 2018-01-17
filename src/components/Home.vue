@@ -72,7 +72,7 @@ export default {
   float: left;
   padding: 10px 20px 10px 20px;
   cursor: pointer; 
-  margin:6% 38%;
+  margin:6% 37.5%;
   z-index: 4;
 }
 

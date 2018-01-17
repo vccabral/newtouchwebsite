@@ -133,6 +133,7 @@ export default {
   color: black;
   display: inline-block;
   line-height: 20px;
+  min-height: 100px;
   padding: 2% 5%;
   text-align: left;
   float: left;

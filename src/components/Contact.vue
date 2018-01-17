@@ -1,6 +1,6 @@
 <template>
   <div id="contact">
-    <div id="main-wrapper">
+    <div class="main-wrapper" v-show ="!successBox">
     <p>{{note}}</p>
        <form>
  	<input type="text" placeholder="First Name" v-model="firstName">
@@ -14,6 +14,10 @@
       </form>	
       <p>Email: info@newtouchdigital.com</p>
     </div>
+      <div id="successBox" class="main-wrapper" v-show="successBox">
+        <p>Your message has been successfully sent,</p><br>
+        <p>Thanks for your feedback!</p>
+      </div>
   </div>
 </template>
 
@@ -27,7 +31,8 @@ export default {
       lastName: '',
       companyName: '',
       email: '',
-      msg: ''
+      msg: '',
+      successBox: false
     }
   },
   computed: {
@@ -44,6 +49,7 @@ export default {
   },
   methods: {
     submit_form: function () {
+      // TODO: input null and sanity check
       let data = {
         'name': this.firstName + '  ' + this.lastName,
         'time': new Date(),
@@ -58,8 +64,7 @@ export default {
         },
         body: JSON.stringify(data)
       }).then(res => {
-        alert('Your message has been sent successfully, thank you for your feedback !')
-        location.reload()
+        this.successBox = true
         // console.log('Request complete! response:', res)
       }).catch(function (err) {
         alert('Connection Error, please try again later')
@@ -82,7 +87,7 @@ export default {
     background-size: cover;
     justify-content: center;
 }
-#main-wrapper{
+.main-wrapper{
     position: relative;
     width: 70%;
     margin: 8% 10%;
@@ -93,7 +98,7 @@ export default {
     background-color: rgba(0,0,0,0.5);
     color:white;
 }
-#main-wrapper input,#msg, #submit_btn{
+.main-wrapper input,#msg, #submit_btn{
     width:35%;
     line-height: 40px;
     font-size:1em;
@@ -139,16 +144,22 @@ input:focus, #msg:focus {
   float: right;
   margin-right: 32%;
 }
+#successBox{
+     padding-top: 50px;
+     min-height: 50%;
+     box-shadow: 0px 7px 5px rgba(33,33,33,0.5);
+     z-index:15;
+}
 /*Moblie responsive*/
 @media screen and (max-device-width: 600px) {
-   #main-wrapper{
+  .main-wrapper{
     min-height: 70%;
      margin: 25% auto;
    }
   p{
      font-size: 0.8em;
   }
-  #main-wrapper input,#msg{
+ .main-wrapper input,#msg{
     width:35%;
     font-size:0.8em;
     padding-left: 10px;
