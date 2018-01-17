@@ -15,8 +15,8 @@
       <p>Email: info@newtouchdigital.com</p>
     </div>
       <div id="successBox" class="main-wrapper" v-show="successBox">
-        <p>Your message has been successfully sent,</p><br>
-        <p>Thanks for your feedback!</p>
+        <p>Your message has been successfully sent. </p><br>
+        <p>We appreciate and thank you for your interest in NewTouch Digital.</p>
       </div>
   </div>
 </template>
@@ -32,7 +32,7 @@ export default {
       companyName: '',
       email: '',
       msg: '',
-      successBox: false
+      successBox: true
     }
   },
   computed: {
@@ -149,6 +149,10 @@ input:focus, #msg:focus {
      min-height: 50%;
      box-shadow: 0px 7px 5px rgba(33,33,33,0.5);
      z-index:15;
+     font-size: 1.3em;
+}
+#successBox>p{
+  margin-bottom: 0;
 }
 /*Moblie responsive*/
 @media screen and (max-device-width: 600px) {
